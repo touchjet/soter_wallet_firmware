@@ -1,0 +1,361 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="soter_wallet_v100" target="8" version="2">
+  <project Name="soter_wallet">
+    <configuration
+      Name="Common"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_linker_heap_size="8192"
+      arm_linker_process_stack_size="0"
+      arm_linker_stack_size="16384"
+      arm_linker_treat_warnings_as_errors="No"
+      arm_simulator_memory_simulation_parameter="RWX 00000000,00100000,FFFFFFFF;RWX 20000000,00010000,CDCDCDCD"
+      arm_target_device_name="nRF52840_xxAA"
+      arm_target_interface_type="SWD"
+      c_preprocessor_definitions="BOARD_CUSTOM;FLOAT_ABI_HARD;FREERTOS;INITIALIZE_USER_SECTIONS;NO_VTOR_CONFIG;NRF52840_XXAA;NRF_SD_BLE_API_VERSION=6;S140;SOFTDEVICE_PRESENT;PB_FIELD_32BIT;RAND_PLATFORM_INDEPENDENT;USE_ETHEREUM ;SES"
+      c_user_include_directories="../config;../../../source/firmware;../../../thirdparty;../../../include;../../../include/transport;../../../thirdparty/nanopb;../../../thirdparty/trezor-crypto;../../../thirdparty/trezor-crypto/aes;../../../thirdparty/trezor-crypto/chacha20poly1305;../../../thirdparty/trezor-cryptoed25519-donna;../../../thirdparty/trezor-crypto/monero;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_advertising;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_link_ctx_manager;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_dtm;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_racp;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_bas;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_dfu;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_dis;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_ias;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_lbs;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_lls;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_rscs;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_rscs_c;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_tps;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/common;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_gatt;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_qwr;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/boards;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/drivers_nrf/usbd;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/stack_info;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_fifo;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_flags;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/balloc;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/bootloader/ble_dfu;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/bsp;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/button;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/cli;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crc16;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crc32;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_sw;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/mbedtls;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cifra;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310_bl;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/csense;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/csense_drv;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/delay;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/ecc;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_task_manager;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/fds;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/fstorage;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/gfx;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/gpiote;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/hardfault;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/hardfault/nrf52;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/hci;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/led_softblink;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/low_power_pwm;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/mem_manager;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/memobj;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/mpu;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/mutex;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/pwm;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/pwr_mgmt;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/queue;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/ringbuf;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/scheduler;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/sdcard;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/sensorsim;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/queue;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/slip;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/sortlist;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/spi_mngr;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/stack_guard;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/svc;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/timer;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/twi_mngr;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/twi_sensor;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/audio;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/cdc;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/cdc/acm;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid/generic;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/msc;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/util;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser/ac_rec_parser;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser/ble_oob_advdata_parser;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/conn_hand_parser/le_oob_rec_parser;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ac_rec;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ble_oob_advdata;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ble_pair_lib;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ble_pair_msg;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/common;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/ep_oob_rec;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/hs_rec;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/connection_handover/le_oob_rec;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/generic/message;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/generic/record;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/launchapp;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/parser/message;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/parser/record;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/text;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/ndef/uri;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t2t_lib;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t2t_lib/hal_t2t;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t2t_parser;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_lib;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_lib/hal_t4t;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/apdu;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/cc_file;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/hl_detection_procedure;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/nfc/t4t_parser/tlv;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/common;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/headers/nrf52;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/toolchain/cmsis/include;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/fprintf;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/nrf_cc310/include;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/config;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/portable/CMSIS/nrf52;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/portable/GCC/nrf52;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/include;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/segger_rtt;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/utf_converter;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/integration/nrfx;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/include;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/hal;../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk"
+      debug_additional_load_file="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/s140/hex/s140_nrf52_6.1.0_softdevice.hex"
+      debug_register_definition_file="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/nrf52840.svd"
+      debug_start_from_entry_point_symbol="No"
+      debug_target_connection="J-Link"
+      gcc_debugging_level="Level 3"
+      gcc_entry_point="Reset_Handler"
+      linker_output_format="hex"
+      linker_printf_fmt_level="long"
+      linker_printf_width_precision_supported="Yes"
+      linker_section_placement_file="flash_placement.xml"
+      linker_section_placement_macros="FLASH_PH_START=0x0;FLASH_PH_SIZE=0xeb000;RAM_PH_START=0x20000000;RAM_PH_SIZE=0x40000;FLASH_START=0x26000;FLASH_SIZE=0xc5000;RAM_START=0x200057b8;RAM_SIZE=0x3a848;UICR_START=0x10001304;UICR_SIZE=0x4"
+      linker_section_placements_segments="FLASH RX 0x0 0xeb000;RAM RWX 0x20000000 0x40000;UICR RX 0x10001304 0x308"
+      macros="CMSIS_CONFIG_TOOL=../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external_tools/cmsisconfig/CMSIS_Configuration_Wizard.jar"
+      project_directory=""
+      project_type="Executable"
+      speed="0" />
+    <folder Name="Segger Startup Files">
+      <file file_name="$(StudioDir)/source/thumb_crt0.s" />
+    </folder>
+    <folder Name="nRF_Core">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/mpu/nrf_mpu.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/stack_guard/nrf_stack_guard.c" />
+    </folder>
+    <folder Name="nRF_Log">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_backend_rtt.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_backend_serial.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_backend_uart.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_default_backends.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_frontend.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/log/src/nrf_log_str_formatter.c" />
+    </folder>
+    <folder Name="nRF_Libraries">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/button/app_button.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error_handler_gcc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_error_weak.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/timer/app_timer_freertos.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/util/app_util_platform.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crc16/crc16.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/fds/fds.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/hardfault/nrf52/handler/hardfault_handler_gcc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/hardfault/hardfault_implementation.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/util/nrf_assert.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_fifo/nrf_atfifo.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic_flags/nrf_atflags.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/atomic/nrf_atomic.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/balloc/nrf_balloc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/fprintf/nrf_fprintf.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/fprintf/nrf_fprintf_format.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/fstorage/nrf_fstorage.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/fstorage/nrf_fstorage_sd.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/memobj/nrf_memobj.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/ringbuf/nrf_ringbuf.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/experimental_section_vars/nrf_section_iter.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/strerror/nrf_strerror.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/sensorsim/sensorsim.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/queue/nrf_queue.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crc32/crc32.c" />
+    </folder>
+    <folder Name="None">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/ses_startup_nrf52840.s" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/ses_startup_nrf_common.s" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/mdk/system_nrf52840.c" />
+    </folder>
+    <folder Name="FreeRTOS">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/croutine.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/event_groups.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/portable/MemMang/heap_1.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/list.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/portable/GCC/nrf52/port.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/portable/CMSIS/nrf52/port_cmsis.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/portable/CMSIS/nrf52/port_cmsis_systick.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/queue.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/stream_buffer.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/tasks.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/freertos/source/timers.c" />
+    </folder>
+    <folder Name="Board Definition">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/boards/boards.c" />
+    </folder>
+    <folder Name="nRF_Drivers">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_power.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_rng.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_clock.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/integration/nrfx/legacy/nrf_drv_spi.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_clock.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_gpiote.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_power.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_rng.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_power_clock.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_saadc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_spim.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/prs/nrfx_prs.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/pwr_mgmt/nrf_pwr_mgmt.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/modules/nrfx/drivers/src/nrfx_wdt.c" />
+    </folder>
+    <folder Name="Application">
+      <folder Name="driver">
+        <file file_name="../../../source/driver/battery.c" />
+        <file file_name="../../../source/driver/button.c" />
+        <file file_name="../../../source/driver/display.c" />
+        <file file_name="../../../source/driver/epd_wxx_hal.c" />
+        <file file_name="../../../source/driver/soter_ble.c" />
+        <file file_name="../../../source/driver/usb.c" />
+        <file file_name="../../../source/driver/soter_service.c" />
+        <file file_name="../../../source/driver/rng.c" />
+        <file file_name="../../../source/driver/power.c" />
+        <file file_name="../../../source/driver/epd_w21_c02.c" />
+        <file file_name="../../../source/driver/gt24l24a2y_hal.c" />
+        <file file_name="../../../source/driver/gt24l24a2y_app.c" />
+        <file file_name="../../../source/driver/flash_fds.c" />
+        <file file_name="../../../source/image_dfu.c" />
+      </folder>
+      <folder Name="transport">
+        <file file_name="../../../source/transport/exchange.pb.c" />
+        <file file_name="../../../source/transport/messages.pb.c" />
+        <file file_name="../../../source/transport/types.pb.c" />
+      </folder>
+      <file file_name="../../../source/main.c" />
+      <folder Name="board">
+        <file file_name="../../../source/board/confirm_sm.c" />
+        <file file_name="../../../source/board/draw.c" />
+        <file file_name="../../../source/board/font.c" />
+        <file file_name="../../../source/board/layout.c" />
+        <file file_name="../../../source/board/memory.c" />
+        <file file_name="../../../source/board/msg_dispatch.c" />
+        <file file_name="../../../source/board/u2f.c" />
+        <file file_name="../../../source/board/canvas.c" />
+        <file file_name="../../../source/board/resources.c" />
+      </folder>
+      <folder Name="firmware">
+        <file file_name="../../../source/firmware/app_confirm.c" />
+        <file file_name="../../../source/firmware/app_layout.c" />
+        <file file_name="../../../source/firmware/coins.c" />
+        <file file_name="../../../source/firmware/crypto.c" />
+        <file file_name="../../../source/firmware/ethereum.c" />
+        <file file_name="../../../source/firmware/ethereum_tokens.c" />
+        <file file_name="../../../source/firmware/exchange.c" />
+        <file file_name="../../../source/firmware/fsm.c" />
+        <file file_name="../../../source/firmware/passphrase_sm.c" />
+        <file file_name="../../../source/firmware/pin_sm.c" />
+        <file file_name="../../../source/firmware/policy.c" />
+        <file file_name="../../../source/firmware/qr_encode.c" />
+        <file file_name="../../../source/firmware/recovery.c" />
+        <file file_name="../../../source/firmware/recovery_cipher.c" />
+        <file file_name="../../../source/firmware/reset.c" />
+        <file file_name="../../../source/firmware/signing.c" />
+        <file file_name="../../../source/firmware/storage.c" />
+        <file file_name="../../../source/firmware/transaction.c" />
+        <file file_name="../../../source/firmware/util.c" />
+        <file file_name="../../../source/firmware/u2f_user.c" />
+        <file file_name="../../../source/firmware/fsm_msg_coin.h" />
+        <file file_name="../../../source/firmware/fsm_msg_common.h" />
+        <file file_name="../../../source/firmware/fsm_msg_crypto.h" />
+        <file file_name="../../../source/firmware/fsm_msg_ethereum.h" />
+        <file file_name="../../../source/firmware/utf8.c" />
+      </folder>
+    </folder>
+    <folder Name="nRF_Segger_RTT">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/segger_rtt/SEGGER_RTT.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/segger_rtt/SEGGER_RTT_Syscalls_SES.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/segger_rtt/SEGGER_RTT_printf.c" />
+    </folder>
+    <folder Name="nRF_BLE">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/auth_status_tracker.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_advdata.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_advertising/ble_advertising.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_conn_params.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_conn_state.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/common/ble_srv_common.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/gatt_cache_manager.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/gatts_cache_manager.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/id_manager.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_gatt/nrf_ble_gatt.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/nrf_ble_qwr/nrf_ble_qwr.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_data_storage.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_database.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_id.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_manager.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/peer_manager_handler.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/pm_buffer.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/security_dispatcher.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/security_manager.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_link_ctx_manager/ble_link_ctx_manager.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/peer_manager/nrf_ble_lesc.c" />
+    </folder>
+    <folder Name="nRF_USB">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/drivers_nrf/usbd/nrf_drv_usbd.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/app_usbd.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/app_usbd_core.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid/app_usbd_hid.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/class/hid/generic/app_usbd_hid_generic.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/app_usbd_string_desc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/usbd/app_usbd_serial_num.c" />
+    </folder>
+    <folder Name="nrf_cc310">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/nrf_cc310/lib/libnrf_cc310_0.9.10.a" />
+    </folder>
+    <folder Name="font_library">
+      <file file_name="../../../thirdparty/gt24l24a2y/gt24l24a2y_nrf52840_segger.a" />
+    </folder>
+    <folder Name="nRF_Crypto backend nRF HW">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw/nrf_hw_backend_init.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw/nrf_hw_backend_rng.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/nrf_hw/nrf_hw_backend_rng_mbedtls.c" />
+    </folder>
+    <folder Name="nRF_Crypto backend uECC">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc/micro_ecc_backend_ecc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc/micro_ecc_backend_ecdh.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/micro_ecc/micro_ecc_backend_ecdsa.c" />
+    </folder>
+    <folder Name="nRF_Oberon_Crypto">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/nrf_oberon/lib/nrf52/liboberon_2.0.5.a" />
+    </folder>
+    <folder Name="nRF_Crypto">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_aead.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_aes.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_aes_shared.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_ecc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_ecdh.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_ecdsa.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_eddsa.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_error.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_hash.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_hkdf.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_hmac.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_init.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_rng.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/nrf_crypto_shared.c" />
+    </folder>
+    <folder Name="nRF_Crypto backend CC310">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_aes.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_aes_aead.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_chacha_poly_aead.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_ecc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_ecdh.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_ecdsa.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_eddsa.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_hash.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_hmac.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_init.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_mutex.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_rng.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/cc310/cc310_backend_shared.c" />
+    </folder>
+    <folder Name="nRF_Crypto backend Oberon">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_chacha_poly_aead.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_ecc.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_ecdh.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_ecdsa.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_eddsa.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_hash.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/libraries/crypto/backend/oberon/oberon_backend_hmac.c" />
+    </folder>
+    <folder Name="UTF8/UTF16 converter">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/external/utf_converter/utf.c" />
+    </folder>
+    <folder Name="nRF_BLE_Services">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_bas/ble_bas.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/ble/ble_services/ble_dis/ble_dis.c" />
+    </folder>
+    <folder Name="nRF_SoftDevice">
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/common/nrf_sdh.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/common/nrf_sdh_ble.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/common/nrf_sdh_freertos.c" />
+      <file file_name="../../../nrf_sdk/nRF5_SDK_15.2.0_9412b96/components/softdevice/common/nrf_sdh_soc.c" />
+    </folder>
+    <folder Name="Config">
+      <file file_name="../../../include/FreeRTOSConfig.h" />
+      <file file_name="../config/custom_board.h" />
+      <file file_name="../config/sdk_config.h" />
+    </folder>
+    <folder Name="trezor-crypto">
+      <file file_name="../../../thirdparty/trezor-crypto/address.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/base32.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/base58.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/bignum.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/bip32.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/bip39.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/blake256.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/blake2b.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/blake2s.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/cash_addr.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/curves.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/ecdsa.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/groestl.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/hasher.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/hmac.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/memzero.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/nem.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/nist256p1.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/pbkdf2.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/rand.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/rc4.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/ripemd160.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/script.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/secp256k1.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/segwit_addr.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/sha2.c" />
+      <file file_name="../../../thirdparty/trezor-crypto/sha3.c" />
+      <folder Name="aes">
+        <file file_name="../../../thirdparty/trezor-crypto/aes/aes_modes.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/aes/aescrypt.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/aes/aeskey.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/aes/aestab.c" />
+      </folder>
+      <folder Name="ed25519-donna">
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/curve25519-donna-32bit.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/curve25519-donna-helpers.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/curve25519-donna-scalarmult-base.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/ed25519-donna-32bit-tables.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/ed25519-donna-basepoint-table.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/ed25519-donna-impl-base.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/ed25519-keccak.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/ed25519-sha3.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/ed25519.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/ed25519-donna/modm-donna-32bit.c" />
+      </folder>
+      <folder Name="chacha20poly1305">
+        <file file_name="../../../thirdparty/trezor-crypto/chacha20poly1305/chacha_merged.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/chacha20poly1305/chacha20poly1305.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/chacha20poly1305/poly1305-donna.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/chacha20poly1305/rfc7539.c" />
+      </folder>
+      <folder Name="monero">
+        <file file_name="../../../thirdparty/trezor-crypto/monero/range_proof.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/monero/serialize.c" />
+        <file file_name="../../../thirdparty/trezor-crypto/monero/xmr.c" />
+      </folder>
+    </folder>
+    <folder Name="nanopb">
+      <file file_name="../../../thirdparty/nanopb/pb_common.c" />
+      <file file_name="../../../thirdparty/nanopb/pb_decode.c" />
+      <file file_name="../../../thirdparty/nanopb/pb_encode.c" />
+    </folder>
+  </project>
+  <configuration Name="Release" c_preprocessor_definitions="NDEBUG" />
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG; DEBUG_NRF"
+    gcc_optimization_level="Debug" />
+</solution>
